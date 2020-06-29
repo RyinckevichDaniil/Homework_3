@@ -1,6 +1,6 @@
 var age = Number( prompt("Сколько вам лет"))
 
-var ageNumber = age > 20 ? age % 10 : age;
+var ageNumber = age > 20 ? age % 10 : age && age > 100 ? age % 100 : age;
 console.log(ageNumber)
 
 
