@@ -1,13 +1,14 @@
 var age = Number( prompt("Сколько вам лет"))
-
-var ageNumber = age > 20 ? age % 10 : age && age > 100 ? age % 100 : age;
-console.log(ageNumber)
+console.log(age);
 
 
-if (ageNumber === 1) {
+if(age % 10 === 1 && age % 100 != 11) {
     console.log(age + ' год')
-} else if (ageNumber > 1 && ageNumber < 5 ) {
-    console.log(age + ' года')
+}else if (
+    age % 10 >= 2 &&
+    age % 10 <= 4 &&
+    (age % 100 < 10 || age % 100 >=20)) {
+        console.log(age + ' года')
 } else {
-    console.log(age + ' лет');
+    console.log(age + ' лет')
 }
